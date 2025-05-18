@@ -20,23 +20,15 @@ const geistMono = Geist_Mono({
 export default function Home() {
 
   const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    const root = document.documentElement;
-    if (isDarkMode) {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
-  }, [isDarkMode]);
+  
   return (
     <>
-      <main className={` ${isDarkMode ? 'bg-white' : 'bg-[#000]'}  p-5`}>
+      <main className={`bg-white dark:bg-[#000]  p-5`}>
         <div className={`${isDarkMode ? 'bg-skyblue' : 'bg-[#001432]'} rounded-xl  h-[719px] overflow-hidden relative`}>
           <div className={`${isDarkMode ? 'bg-darkblue' : 'bg-[linear-gradient(360deg,_#164997_0%,_rgba(14,54,115,0.8)_30.9%,_rgba(0,20,50,0.7)_58.4%)]'} absolute left-1/2 -translate-x-1/2 w-[130%] h-[996px] rounded-b-full z-0 top-[-363px]`}></div>
           <div className="p-4">
             {/* Header Start */}
-            <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+            <Header />
             {/* Header End */}
             <div>
               <span className="absolute top-[254px] left-[162px]">

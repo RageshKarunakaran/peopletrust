@@ -1,6 +1,8 @@
+import { useTheme } from "next-themes";
 import Image from "next/image";
 
-const Header = ({ isDarkMode, setIsDarkMode }) => {
+const Header = () => {
+  const { theme, setTheme } = useTheme();
   return (
     <header className="flex items-center justify-between z-1 relative">
       <div>
@@ -16,14 +18,23 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
 
       <div className="flex items-center gap-4">
         <button
-          onClick={() => setIsDarkMode((prev) => !prev)}
+          aria-label="Toggle theme"
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           className="border-[2px] border-white w-11 h-11 rounded-full flex items-center justify-center cursor-pointer"
         >
           <Image
-            src={`${isDarkMode ?  "/dark.svg" : "/sun.svg"}`}
+            src={"/dark.svg"}
             alt=""
             width={22}
             height={22}
+            className=" dark:hidden"
+          />
+          <Image
+            src={"/sun.svg"}
+            alt=""
+            width={22}
+            height={22}
+            className="hidden dark:block"
           />
         </button>
         <button className="border-[2px] border-white py-[14px] px-7 rounded-[74px] text-base text-white font-medium cursor-pointer">
