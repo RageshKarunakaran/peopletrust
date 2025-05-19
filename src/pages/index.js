@@ -139,7 +139,7 @@ export default function Home() {
 
         {/* How Lending Works Section Start */}
         <section
-          className={`bg-cardwhite dark:bg-darkbluetwo py-10 my-10 rounded-[28px] max-lg:px-4 md:xl-[100px] relative overflow-hidden`}
+          className={`bg-cardwhite dark:bg-darkbluetwo py-10 my-10 rounded-[28px] max-lg:px-4 lg:mx-[120px] relative overflow-hidden`}
         >
           <span className="absolute right-0 top-0 max-lg:hidden">
             <Image
@@ -308,7 +308,7 @@ export default function Home() {
 
         {/* How Lending Works Section Start */}
         <section
-          className={`bg-cardwhite dark:bg-darkbluetwo py-10 my-10 rounded-[28px] max-lg:px-4 md:xl-[100px] relative overflow-hidden`}
+          className={`bg-cardwhite dark:bg-darkbluetwo py-10 my-10 rounded-[28px] max-lg:px-4 lg:mx-[120px] relative overflow-hidden`}
         >
           <span className="absolute right-0 top-0 max-sm:hidden">
             <Image
