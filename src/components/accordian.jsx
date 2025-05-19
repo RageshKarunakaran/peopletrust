@@ -6,18 +6,18 @@ const AccordionItem = ({ index, title, content, openIndex, setOpenIndex }) => {
   return (
     <div className="border border-darkblue rounded-xl mb-2 overflow-hidden shadow-sm ">
       <button
-        className={`w-full flex justify-between items-center px-6 py-3 text-left ${isOpen ? 'bg-white text-textgray' : 'bg-darkblue text-white hover:bg-skyblue'}  `}
+        className={`w-full flex justify-between items-center px-6 py-3 text-left ${isOpen ? 'bg-white dark:bg-darkblue text-textgray' : 'bg-darkblue text-white hover:bg-skyblue'}  `}
         onClick={() => setOpenIndex(isOpen ? null : index)}
       >
-        <span className={`text-[20px] font-medium ${isOpen ? 'text-darkblue' : ' text-white'}`}>{title}</span>
+        <span className={`text-[20px] font-medium ${isOpen ? 'text-darkblue dark:text-white' : ' text-white'}`}>{title}</span>
         <span className={`text-lg  rounded-full w-6 h-6 flex items-center justify-center ${isOpen ? 'text-white bg-darkblue' : ' text-darkblue bg-white'}`}>{isOpen ? 'x' : '+'}</span>
       </button>
       <div
-        className={`px-6 transition-all duration-300 ease-in-out overflow-hidden ${
+        className={`px-6 transition-all duration-300 ease-in-out overflow-hidden bg-white dark:bg-darkblue ${
           isOpen ? 'max-h-40 pb-4' : 'max-h-0'
         }`}
       >
-        <p className="text-[#666666] text-base leading-6">{content}</p>
+        <p className="text-[#666666] dark:text-white text-base leading-6">{content}</p>
       </div>
     </div>
   );
@@ -35,7 +35,7 @@ export default function Accordion() {
   ];
 
   return (
-    <div className="w-10/12 mx-auto mt-10 flex flex-wrap gap-x-10 gap-y-5">
+    <div className="md:w-10/12 mx-auto mt-10 flex flex-wrap gap-x-10 gap-y-5">
     {items.map((item, index) => (
       <div key={index} className="w-full md:w-[calc(50%-20px)]">
         <AccordionItem

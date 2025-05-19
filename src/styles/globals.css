@@ -8,6 +8,7 @@
   --color-skyblue: #007CFF;
   --color-darkblue:#164997;
   --color-textgray:#333333;
+  --color-darkbluetwo:#001432;
 }
 :root {
   --background: #ffffff;
@@ -41,6 +42,19 @@ body {
   @apply w-[34px] h-[34px] bg-darkblue rounded-xl
 }
 .twoSlider .slick-next:before{
+  @apply w-[34px] h-[34px] bg-darkblue rounded-xl
+}
+
+.cardSlider .slick-prev{
+  @apply w-[34px] h-[34px] bg-darkblue rounded-xl -left-12
+}
+.cardSlider .slick-next{
+  @apply w-[34px] h-[34px] bg-darkblue rounded-xl -right-12
+}
+.cardSlider .slick-prev:before{
+  @apply w-[34px] h-[34px] bg-darkblue rounded-xl
+}
+.cardSlider .slick-next:before{
   @apply w-[34px] h-[34px] bg-darkblue rounded-xl
 }
 

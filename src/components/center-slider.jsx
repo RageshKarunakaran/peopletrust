@@ -16,13 +16,13 @@ const team = [
     name: "Hakim Smith",
     title: "CTO",
     image: "/avatar.png",
-    testimonial: "Norem ipsum dolor sit amet. Norem ipsum dolor sit amet.",
+    testimonial: "As the CEO, I can confidently say this is the most impressive Web 3 platform I've encountered, and I've explored many. I have no financial incentive to share this.",
   },
   {
     name: "Taco Salad",
     title: "Designer",
     image: "/avatar.png",
-    testimonial: "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+    testimonial: "As the CEO, I can confidently say this is the most impressive Web 3 platform I've encountered, and I've explored many. I have no financial incentive to share this. ",
   },
   // Add more as needed
 ];
@@ -46,12 +46,10 @@ const TeamSlider = () => {
   };
 
   return (
-    <div className="py-10 text-white text-center">
-      <h2 className="text-3xl font-semibold mb-8">Our Team</h2>
-      <Slider {...settings}>
+      <Slider {...settings} className="cardSlider">
         {team.map((person, index) => (
-          <div key={index} className="px-2">
-            <div className="bg-blue-800/90 rounded-3xl p-6 text-white mx-auto w-11/12 max-w-md transition-all duration-300 ease-in-out hover:scale-[1.02]">
+          <div key={index} className="">
+            <div className="bg-blue-800/90 rounded-3xl p-6 text-white mx-auto w-11/12 max-w-md transition-all duration-300 ease-in-out">
               <div className="flex justify-center mb-4">
                 <Image
                   src={person.image}
@@ -68,7 +66,6 @@ const TeamSlider = () => {
           </div>
         ))}
       </Slider>
-    </div>
   );
 };
 
